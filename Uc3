@@ -1,0 +1,26 @@
+package javapackage;
+
+public class Uc3 {
+	public static void main(String[] args) {
+		//constants
+		int IS_FULL_TIME = 1;
+		int IS_PART_TIME = 2;
+		int EMP_RATE_PER_HR = 16;
+		int income = 0;
+		int EMP_HRS = 0;
+		
+		
+		//COM
+		double empCheck = Math.floor(Math.random() * 10) % 2;
+		
+		if (empCheck ==IS_FULL_TIME)
+			 EMP_HRS = 8;
+		else if (empCheck ==IS_PART_TIME)
+			   EMP_HRS = 4;
+		else
+			EMP_HRS = 0;
+		
+		income = EMP_HRS *  EMP_RATE_PER_HR;
+		System.out.println("salary : " + income);
+	}
+	}
