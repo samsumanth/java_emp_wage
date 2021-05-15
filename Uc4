@@ -1,0 +1,20 @@
+package javapackage;
+
+public class Uc4 {
+	public static void main(String[] args) {
+		
+		int empCheck = (int)Math.floor(Math.random() * 10) % 3;
+	
+	switch(empCheck)
+	{
+	case 0: System.out.println("emp is present");
+	break;
+	case 1:System.out.println("emp is absent");
+	break;
+	default:System.out.println("invalid Input");
+	break;
+	
+	}
+	}
+
+}
