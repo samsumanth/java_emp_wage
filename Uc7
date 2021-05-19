@@ -1,0 +1,45 @@
+public class EmpWageComputation {
+
+	 int empCheck = (int) (Math.floor(Math.random()*10)%3);
+	 public static final int fullTime=1;
+	 public static final int partTime=2;
+	 public static finalint ratePerHr=20;
+	 public static finalint salary;
+	 public static finalint empHrs=0;
+	 public static finalint TotalDays=20;
+
+	public void empChecking() {
+		int TotalSalary = 0, day = 0, noOfHrs = 0;
+	
+
+		while(day<TotalDays && noOfHrs<=100)
+		{		
+			int empCheck = (int) (Math.floor(Math.random()*10)%3);
+			switch(empCheck)
+			{
+			case fullTime:
+				empHrs = 8;
+				salary = empHrs*ratePerHr;
+				break;
+			case partTime:
+				empHrs = 4;
+				salary = empHrs*ratePerHr;
+				break;
+			default:
+				empHrs = 0;
+			}
+			TotalSalary = TotalSalary+salary;
+			noOfHrs = noOfHrs+empHrs;
+			day++;
+		}
+
+		System.out.println("Total No Of Hrs: "+noOfHrs);
+		System.out.println("Total Employee Wage: "+TotalSalary);
+}
+
+public static void main(String[] args) {
+	EmpWageComputation e = new EmpWageComputation();
+	e.empChecking();
+}
+
+}
